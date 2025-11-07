@@ -1,0 +1,27 @@
+{
+  "name": "glowmin-contest-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot pentru GLOWMIN Genesis NFT Contest cu points tracking",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node src/test.js"
+  },
+  "keywords": ["telegram", "bot", "glowmin", "nft", "contest"],
+  "author": "AlfaNest Labs",
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^4.15.0",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.3.0",
+    "axios": "^1.6.2",
+    "express": "^4.19.2",
+    "@solana/web3.js": "^1.87.6",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
+
