@@ -55,6 +55,10 @@ function startDiscordAuthServer(bot) {
 
   const app = express();
 
+  app.get('/', (req, res) => {
+    res.send('GLOWMIN Discord OAuth server is running.');
+  });
+
   app.get('/discord/login', async (req, res) => {
     try {
       const telegramId = parseInt(req.query.telegram_id, 10);
@@ -151,7 +155,7 @@ function startDiscordAuthServer(bot) {
     }
   });
 
-  const port = process.env.DISCORD_AUTH_PORT || 4000;
+  const port = Number(process.env.PORT) || Number(process.env.DISCORD_AUTH_PORT) || 4000;
   app.listen(port, () => {
     console.log(`🌐 Discord OAuth server running on port ${port}`);
   });
